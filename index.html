@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAWAII | City of Heaven</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #f8f3ea;
+      color: #123f4f;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+      line-height: 1.7;
+    }
+
+    .hero {
+      min-height: 92vh;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.52)),
+        url("assets/photo01.jpg") center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-inner {
+      max-width: 960px;
+      text-shadow: 0 8px 30px rgba(0,0,0,.55);
+    }
+
+    .eyebrow {
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: #f1d895;
+      font-size: .9rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: .08em;
+      font-size: clamp(2.7rem, 7vw, 6rem);
+    }
+
+    .tagline {
+      margin-top: 18px;
+      font-size: clamp(1.05rem, 2.4vw, 1.6rem);
+      color: #fff7df;
+    }
+
+    .hero-copy {
+      margin: 28px auto 0;
+      max-width: 720px;
+      font-size: 1.05rem;
+      color: #f8f1df;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248,243,234,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(20,70,90,.14);
+      text-align: center;
+      padding: 12px 10px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 4px 14px;
+      color: #165065;
+      text-decoration: none;
+      font-size: .95rem;
+      letter-spacing: .08em;
+    }
+
+    main {
+      width: min(1120px, 94vw);
+      margin: 0 auto;
+      padding: 54px 0 70px;
+    }
+
+    section {
+      margin: 0 auto 72px;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin: 0;
+      font-weight: 400;
+      font-size: clamp(2rem, 5vw, 3.7rem);
+      letter-spacing: .08em;
+      color: #12485a;
+    }
+
+    .section-note {
+      max-width: 740px;
+      margin: 16px auto 0;
+      color: #61727a;
+      font-size: 1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 12px 32px rgba(0,0,0,.16);
+      background: #ddd;
+    }
+
+    .movie-card {
+      padding: 24px;
+      border-radius: 26px;
+      background: #fffaf2;
+      box-shadow: 0 18px 52px rgba(0,0,0,.13);
+      margin-top: 24px;
+    }
+
+    .movie-card.dark {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(205,174,104,.14), transparent 36%),
+        linear-gradient(180deg, #141414 0%, #050505 100%);
+      color: #f4f0e8;
+    }
+
+    .movie-card.dark h2,
+    .movie-card.dark .eyebrow {
+      color: #d8c38a;
+    }
+
+    .movie-card.dark .section-note {
+      color: #cfc8bb;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      max-height: 78vh;
+      border-radius: 20px;
+      background: #000;
+      box-shadow: 0 16px 44px rgba(0,0,0,.22);
+    }
+
+    .quote {
+      margin: 26px auto 0;
+      max-width: 780px;
+      text-align: center;
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      color: #d8c38a;
+      line-height: 1.9;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 20px 50px;
+      color: #68767b;
+      letter-spacing: .08em;
+      font-size: .9rem;
+      border-top: 1px solid rgba(20,70,90,.12);
+    }
+
+    @media (max-width: 680px) {
+      nav a { margin: 4px 8px; font-size: .82rem; }
+      .movie-card { padding: 14px; border-radius: 18px; }
+      video { border-radius: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Travel Memory</div>
+      <h1>HAWAII<br>City of Heaven</h1>
+      <div class="tagline">Once you visit, your heart will always long to return.</div>
+      <p class="hero-copy">
+        A paradise of light, ocean, sunset, golf, and quiet memories.
+        Hawaii is not only a destination — it is a place the heart remembers.
+      </p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#photo-movie">Photo Movie</a>
+    <a href="#short-movie">Short Movie</a>
+    <a href="#farewell">Farewell Memory</a>
+  </nav>
+
+  <main>
+    <section id="gallery">
+      <div class="section-head">
+        <div class="eyebrow">Island Gallery</div>
+        <h2>Moments in Paradise</h2>
+        <p class="section-note">
+          From golden sunsets to blue horizons, from quiet meals to unforgettable rounds of golf —
+          these are small fragments of a place that always calls us back.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <img src="assets/photo01.jpg" alt="Hawaii photo 1">
+        <img src="assets/photo02.jpg" alt="Hawaii photo 2">
+        <img src="assets/photo03.jpg" alt="Hawaii photo 3">
+        <img src="assets/photo04.jpg" alt="Hawaii photo 4">
+        <img src="assets/photo05.jpg" alt="Hawaii photo 5">
+        <img src="assets/photo06.jpg" alt="Hawaii photo 6">
+        <img src="assets/photo07.jpg" alt="Hawaii photo 7">
+        <img src="assets/photo08.jpg" alt="Hawaii photo 8">
+        <img src="assets/photo09.jpg" alt="Hawaii photo 9">
+        <img src="assets/photo10.jpg" alt="Hawaii photo 10">
+      </div>
+    </section>
+
+    <section id="photo-movie">
+      <div class="movie-card">
+        <div class="section-head">
+          <div class="eyebrow">Hawaii Photo Movie</div>
+          <h2>Memories in Motion</h2>
+          <p class="section-note">
+            A gentle photo movie woven from still images, music, and the soft afterglow of Hawaii.
+          </p>
+        </div>
+        <video controls playsinline preload="metadata">
+          <source src="assets/hawaii_photo_movie.mov" type="video/quicktime">
+          お使いのブラウザでは動画を再生できません。
+        </video>
+      </div>
+    </section>
+
+    <section id="short-movie">
+      <div class="movie-card">
+        <div class="section-head">
+          <div class="eyebrow">Hawaii in Motion</div>
+          <h2>Island Breeze</h2>
+          <p class="section-note">
+            Feel the movement of the island — the light, the sea, the streets, and the moments that make Hawaii unforgettable.
+          </p>
+        </div>
+        <video controls playsinline preload="metadata">
+          <source src="assets/hawaii_short.mov" type="video/quicktime">
+          お使いのブラウザでは動画を再生できません。
+        </video>
+      </div>
+    </section>
+
+    <section id="farewell">
+      <div class="movie-card dark">
+        <div class="section-head">
+          <div class="eyebrow">A Cinematic Memory</div>
+          <h2>Premonition of Farewell</h2>
+          <p class="section-note">
+            Some memories never truly fade. They simply grow quieter with time,
+            becoming a tender part of who we are.
+          </p>
+        </div>
+        <video controls playsinline preload="metadata">
+          <source src="assets/farewell_memory.mov" type="video/quicktime">
+          お使いのブラウザでは動画を再生できません。
+        </video>
+        <div class="quote">
+          “Every farewell leaves behind a place where the heart quietly returns.”
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    HAWAII | City of Heaven — Where beautiful memories live forever.
+  </footer>
+</body>
+</html>
